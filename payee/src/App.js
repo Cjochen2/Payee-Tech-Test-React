@@ -8,16 +8,45 @@ import payees from './payee.json';
 class App extends Component {
 
   state = {
-    payees
+    payees,
+    currentPage: 1,
+    payeesPerPage: 2
   };
-componentDidMount(){
-  console.log(payees)
-}
+
+handleClick(event) {
+  this.setState({
+    currentPage: Number(event.target.id)
+  })
+}  
+
   render(){
+    const {payees, currentPage, payeesPerPage} = this.state;
+
+    const indexOfLastPayee = currentPage * payeesPerPage;
+    const indexOfFirstPayee = indexOfLastPayee - payeesPerPage;
+    const currentPayees = payees.slice(indexOfFirstPayee, indexOfLastPayee);
+
+    const pageNumbers = [];
+    for(let i = 1; i <= Math.ceil(payees.length / payeesPerPage); i++) {
+      pageNumbers.push(i);
+    };
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <p
+          key={number}
+          id={number}
+          onClick={this.handleClick.bind(this)}
+        >
+          {number}
+        </p>
+      );
+    });
+  
   return (
     <Wrapper>
       <Title>Payee Information</Title>
-      {this.state.payees.map(client => (
+      {currentPayees.map(client => (
         <PayeeCard 
         payeeName={client.Payee.Name}
         attention={client.Payee.Attention}
@@ -32,6 +61,11 @@ componentDidMount(){
         zip={client.Payee.Address.PostalCode}
         />
       ))}
+      <div>
+        <ul id='pageNumbers'>
+          {renderPageNumbers}
+        </ul>
+      </div>
       
     </Wrapper>
   );
