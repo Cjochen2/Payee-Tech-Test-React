@@ -1,22 +1,28 @@
+.payeeName {
+  text-align: center;
+  margin-top: 3%;
+  
+}
+
+.phoneInfo {
+  text-align: center;
+  margin-top: 3%;
+}
+
+address {
+  text-align: center;
+  margin-top: 3%;
+}
+
 .payeeCard {
   background: #fff;
   border-radius: 2px;
-  height: 325px;
+  /* height: 325px; */
   margin: 1rem;
   position: relative;
-  width: 325px;
+  width: 40%;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
-}
-
-.payeeCard > .img-container {
-  height: 60%;
-  overflow: hidden;
-  text-align: center;
-  background:#6CADDC;
-}
-.payeeCard > .img-container > img {
-  width: 60%
 }
 
 .payeeCard > .content {
@@ -30,7 +36,7 @@
 }
 
 .payeeCard > .content > ul > li {
-  margin-top: 18px;
+  margin-top: 8px;
 }
 
 .payeeCard > .remove {

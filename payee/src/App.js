@@ -33,13 +33,13 @@ handleClick(event) {
 
     const renderPageNumbers = pageNumbers.map(number => {
       return (
-        <p
+        <span
           key={number}
           id={number}
           onClick={this.handleClick.bind(this)}
         >
           {number}
-        </p>
+        </span>
       );
     });
   
@@ -56,15 +56,16 @@ handleClick(event) {
         street={client.Payee.Address.Address1}
         street2={client.Payee.Address.Address2}
         city={client.Payee.Address.City}
-        providence={client.Payee.StateOrProvidence}
+        province={client.Payee.Address.StateOrProvince}
         country={client.Payee.Address.Country}
         zip={client.Payee.Address.PostalCode}
         />
       ))}
-      <div>
-        <ul id='pageNumbers'>
+      
+      <div className="pagination">
+
           {renderPageNumbers}
-        </ul>
+        
       </div>
       
     </Wrapper>
