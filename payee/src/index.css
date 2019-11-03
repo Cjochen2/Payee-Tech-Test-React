@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ECEFF1;
 }
 
 code {
@@ -19,14 +20,15 @@ code {
   margin-bottom: 2%;
   margin-top: 2%;
 	bottom: 0px;
-	width: 100%;
+  width: 100%;
 }
 .pagination span {
   cursor: pointer;
   color: black;
   padding: 8px 16px;
   text-decoration: none;
-  border: 1px solid #ddd;
+  border: 1px solid black;
+  background: white;
 }
 
 .pagination span.active {

@@ -15,7 +15,7 @@ class App extends Component {
     currentPage: 1,
     payeesPerPage: 2
   };
-
+  //updates the current page based on what pagination number is clicked
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
@@ -23,6 +23,8 @@ class App extends Component {
   }
 
   render() {
+
+    // Logic for displaying payee cards
     const { payees, currentPage, payeesPerPage } = this.state;
 
     const indexOfLastPayee = currentPage * payeesPerPage;
@@ -34,6 +36,7 @@ class App extends Component {
       pageNumbers.push(i);
     };
 
+    // Logic for displaying page numbers
     const renderPageNumbers = pageNumbers.map(number => {
       let classes = this.state.currentPage === number ? 'active' : '';
 
@@ -54,7 +57,7 @@ class App extends Component {
         <Title>Payee Information</Title>
         <Wrapper>
           <div className='row'>
-            
+
             {currentPayees.map(client => (
               <PayeeCard
                 payeeName={client.Payee.Name}
@@ -87,11 +90,11 @@ class App extends Component {
 
               </PayeeCard>
             ))}
-            
+
           </div>
           <div className="row">
             <div className="pagination justify-content-center">
-                {renderPageNumbers}
+              {renderPageNumbers}
             </div>
           </div>
 
