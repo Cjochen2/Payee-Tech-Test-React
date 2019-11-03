@@ -4,7 +4,7 @@ import "./style.css";
 function PayeeCard(props) {
   return (
 
-    <div className="payeeCard col-5">
+    <div className="payeeCard col-md-5 col-12">
 
       <div className="payeeName">
         {props.payeeName}
