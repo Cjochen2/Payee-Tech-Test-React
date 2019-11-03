@@ -1,4 +1,4 @@
-.wrapper {
+.container-fluid {
   padding-top: 50px;
   background: white;
   height: 100%;
@@ -8,4 +8,8 @@
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+}
+
+.row{
+  width: 100%;
 }

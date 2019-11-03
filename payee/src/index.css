@@ -13,10 +13,11 @@ code {
 }
 
 .pagination {
-  
 	padding-bottom: 10px;
 	padding-top: 10px;
-	text-align: center;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
 	bottom: 0px;
 	width: 100%;
 }
@@ -25,7 +26,6 @@ code {
   color: black;
   padding: 8px 16px;
   text-decoration: none;
-  transition: background-color .3s;
   border: 1px solid #ddd;
 }
 
@@ -34,3 +34,4 @@ code {
   color: white;
   border: 1px solid #0099FF;
 }
+

@@ -1,0 +1,19 @@
+.paymentCard {
+    border-bottom: solid;
+}
+
+.cardTitle {
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+.cardNumber {
+    margin-top: 2%;
+    font-size: large;
+    text-align: center;
+}
+
+.cardValidation {
+    margin-bottom: 2%;
+}
