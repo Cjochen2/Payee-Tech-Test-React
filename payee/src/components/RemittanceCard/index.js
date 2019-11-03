@@ -4,15 +4,19 @@ import "./style.css";
 function RemittanceCard(props) {
   return (
     <div className="remCard">
-      <div className="payorName">
-        {props.payorName}
+      <div className="payorName row">
+        <div className="client col-7 text-center"><strong>Client:</strong> {props.payorName}</div> <div className="clientId col-5 text-center"><strong>Id:</strong> {props.id}</div>
       </div>
-      <div className="content">
+      <div className="payorContent">
         <div className="payorInfo">
-          <strong>Id:</strong> {props.id}  //  <strong>InvoiceNo:</strong> {props.invoice}
+           <strong>InvoiceNo:</strong> {props.invoice}
           </div>
+        <div className="description">
          <p>{props.desc}</p>
-         {props.amount}
+         </div>
+        <div className="total text-right"> 
+         <strong>Total:</strong> {props.amount}
+         </div>
       </div>
     </div>
   );

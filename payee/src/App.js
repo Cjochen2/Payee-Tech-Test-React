@@ -7,6 +7,7 @@ import PaymentCard from './components/PaymentCard';
 import RemittanceCard from './components/RemittanceCard';
 
 
+
 class App extends Component {
 
   state = {
@@ -34,10 +35,13 @@ class App extends Component {
     };
 
     const renderPageNumbers = pageNumbers.map(number => {
+      let classes = this.state.currentPage === number ? 'active' : '';
+
       return (
         <span
           key={number}
           id={number}
+          className={classes}
           onClick={this.handleClick.bind(this)}
         >
           {number}
@@ -70,6 +74,7 @@ class App extends Component {
                   cvv={client.Payment.CVV}
                   exp={client.Payment.Exp}
                 />
+                <div className="remittance">Payor(s) Information</div>
                 {client.Remittance.map(payor => (
                   <RemittanceCard
                     payorName={payor.PayorName}

@@ -12,7 +12,7 @@ function PaymentCard(props) {
         </div>
 
         <div className="cardValidation row">
-            <div className="col-6"><strong>Exp:</strong> {props.exp}</div>   <div className="col-6"><strong>CVV:</strong> {props.cvv}</div>
+            <div className="col-6 text-center"><strong>Exp:</strong> {props.exp}</div>   <div className="col-6 text-center"><strong>CVV:</strong> {props.cvv}</div>
         </div>
         
     </div>

@@ -1,0 +1,24 @@
+.payorContent {
+    margin-left: 2%;
+}
+
+.payorInfo {
+    margin-bottom: 1%;
+    font-size: large;
+}
+
+.payorName {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: x-large;
+}
+
+.remCard {
+    border-bottom: outset;
+}
+
+.total {
+    margin-bottom: 2%;
+    margin-right: 2%;
+    font-size: x-large;
+}

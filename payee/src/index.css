@@ -35,3 +35,9 @@ code {
   border: 1px solid #0099FF;
 }
 
+.remittance {
+  text-align: center;
+  font-size: xx-large;
+  text-decoration: underline;
+}
+
